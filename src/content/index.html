@@ -9,7 +9,8 @@
   <meta name="description" content="Your all-in-one booking app" />
 
   <meta property="og:title" content="Trillo - your booking app" />
-  <meta property="og:description" content="Your all-in-one booking app. It lets you find hotels, flights, cars and adventurous tours. Come and find the best choices!" />
+  <meta property="og:description"
+    content="Your all-in-one booking app. It lets you find hotels, flights, cars and adventurous tours. Come and find the best choices!" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="" />
   <meta property="og:image" content="https://maciejkorsan.com/wtf-gulp-starter/assets/img/cover.png" />
@@ -17,13 +18,53 @@
   <meta property="og:image:height" content="800px" />
 
   <link rel="icon" type="image/png" href="assets/img/favicon.png" />
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&display=swap&subset=latin-ext" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&display=swap&subset=latin-ext"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/main.css" />
 
 </head>
 
 <body>
-  <h1>Trillo</h1>
+  <div class="container">
+    <header class="header">
+      <img src="assets/img/logo.png" alt="trillo logo" class="logo">
+
+      <form action="#" class="search">
+        <input type="text" class="search__input" placeholder="search hotels, flights etc...">
+        <button class="search__button">
+          <svg class="search__icon">
+            <use xlink:href="assets/img/sprite.svg#icon-magnifying-glass"></use>
+          </svg>
+        </button>
+      </form>
+      <nav class="user-nav">
+        <div class="user-nav__icon-box">
+          <svg class="user-nav__icon">
+            <use xlink:href="assets/img/sprite.svg#icon-bookmark"></use>"
+          </svg>
+          <span class="user-nav__notification">3</span>
+          <svg class="user-nav__icon">
+            <use xlink:href="assets/img/sprite.svg#icon-chat"></use>"
+          </svg>
+          <span class="user-nav__notification user-nav__notification--1">7</span>
+        </div>
+        <div class="user-nav__user">
+          <img src="assets/img/user.jpg" alt="user photo" class="user-nav__user-photo">
+          <span class="user-nav__user-name">Jonas</span>
+        </div>
+      </nav>
+    </header>
+
+    <div class="content">
+
+      <nav class="sidebar">
+        navigation
+      </nav>
+      <main class="hotel-view">
+        hotel view
+      </main>
+    </div>
+  </div>
 
   <script src="js/main.js"></script>
 </body>

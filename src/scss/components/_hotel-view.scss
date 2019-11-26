@@ -77,8 +77,17 @@
   cursor: pointer;
   transition: 0.2s;
   backface-visibility: hidden;
+
+  & span {
+    margin-left: 3px;
+    transition: margin-left 0.2s;
+  }
   &:hover {
     color: var(--color-grey-dark-1);
+
+    span {
+      margin-left: 8px;
+    }
   }
   &:focus {
     outline: none;
@@ -135,5 +144,60 @@
     &:not(:last-child) {
       margin-right: -1.5rem;
     }
+  }
+}
+
+//*hotel-view --> user-reviews
+
+.review {
+  background-color: #fff;
+  box-shadow: var(--line);
+  padding: 3rem;
+  margin-bottom: 3.5rem;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "\201C";
+    position: absolute;
+    top: -2.7rem;
+    left: -1rem;
+    font-size: 20rem;
+    color: var(--color-grey-light-2);
+    font-family: sans-serif;
+    line-height: 1;
+    z-index: 1;
+  }
+
+  &__text {
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 10;
+  }
+  &__user {
+    display: flex;
+    align-items: center;
+  }
+  &__photo {
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    margin-right: 1.2rem;
+  }
+  &__user-box {
+    margin-right: auto;
+  }
+  &__user-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  &__user-date {
+    font-size: 1rem;
+    color: var(--color-grey-dark-3);
+  }
+  &__rating {
+    font-size: 2rem;
+    color: var(--color-primary-dark);
   }
 }

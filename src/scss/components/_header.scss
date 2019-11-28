@@ -4,10 +4,17 @@
 }
 
 .search {
-  flex: 0 0 40%;
+  flex: 0 0 45%;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media only screen and (max-width: $bp-smallest) {
+    order: 1;
+    flex: 0 0 100%;
+    background-color: var(--color-grey-light-2);
+  }
 
   &__input {
     width: 90%;
@@ -20,6 +27,10 @@
     padding: 1rem 2rem;
     border-radius: 100px;
     transition: 0.2s;
+
+    @media only screen and (max-width: $bp-smallest) {
+      padding: 1.5rem 2rem;
+    }
 
     &::placeholder {
       color: var(--color-grey-dark-3);
@@ -64,10 +75,14 @@
 
 //user navigation
 .user-nav {
-  flex: 0 0 20%;
+  flex: 0 0 25%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+
+  @media only screen and (max-width: $bp-smallest) {
+    flex: 0 0 40%;
+  }
 
   &__icon-box {
     flex-basis: 40%;

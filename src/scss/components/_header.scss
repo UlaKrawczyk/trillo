@@ -90,7 +90,6 @@
     justify-content: space-around;
     position: relative;
   }
-
   &__icon {
     height: 2.25rem;
     width: 2.25rem;
@@ -113,7 +112,6 @@
     width: 1.5rem;
     height: 1.5rem;
     border-radius: 50%;
-
     &--1 {
       left: 85%;
     }
@@ -133,5 +131,11 @@
     font-size: 1rem;
     color: var(--color-grey-dark-1);
     align-self: center;
+  }
+
+  &__user:hover ~ &__dropdown {
+    width: 16rem;
+    opacity: 1;
+    visibility: visible;
   }
 }

@@ -1,7 +1,7 @@
 # TRILLO 
 ## BEST BOOKING PLACE!
 
-![nature](github/webpage-desktop.jpg)
+![page layout](github/trillo.jpg)
 
 
 **If you want to try it out, click here: [Natours webpage](https://ulakrawczyk.github.io/trillo/)**
@@ -13,8 +13,9 @@
 * animated buttons
 * currentColors, mask-image
 
-![rotating tour-cards](github/cards-small.jpg)
+![mobile view in portrait mode](github/trillo-mobile.jpg)
 
+![mobile view in landscape mode](github/trillo-mobile-2.jpg)
 
 ### Page is fully responsive using:
 * media queries and correct units

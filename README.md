@@ -4,7 +4,7 @@
 ![page layout](github/trillo.jpg)
 
 
-**If you want to try it out, click here: [Natours webpage](https://ulakrawczyk.github.io/trillo/)**
+**If you want to try it out, click here: [Trillo webpage](https://ulakrawczyk.github.io/trillo/)**
 
 ### This is a simple webpage created during the Udemy course to practise css flex-box:
 * using different properties of flex-box to build overall layout and to position the elements on the page
@@ -15,7 +15,7 @@
 
 ![mobile view in portrait mode](github/trillo-mobile.jpg)
 
-![mobile view in landscape mode](github/trillo-mobile-2.jpg)
+
 
 ### Page is fully responsive using:
 * media queries and correct units
@@ -23,7 +23,7 @@
 * responsive images with resolution switching
 * desktop first technique
 
-![nature](github/webpage-mobile.jpg)
+![mobile view in landscape mode](github/trillo-mobile-2.jpg)
 
 #### Browser support was also considered (graceful degradation used).
 

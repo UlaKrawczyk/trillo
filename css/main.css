@@ -32,6 +32,34 @@
     -webkit-box-shadow: none;
             box-shadow: none; } }
 
+@-webkit-keyframes changingImages {
+  0% {
+    opacity: 0; }
+  2% {
+    opacity: 0; }
+  15% {
+    opacity: 1; }
+  85% {
+    opacity: 1; }
+  98% {
+    opacity: 0; }
+  100% {
+    opacity: 0; } }
+
+@keyframes changingImages {
+  0% {
+    opacity: 0; }
+  2% {
+    opacity: 0; }
+  15% {
+    opacity: 1; }
+  85% {
+    opacity: 1; }
+  98% {
+    opacity: 0; }
+  100% {
+    opacity: 0; } }
+
 :root {
   --color-primary: rgb(235, 47, 100);
   --color-primary-light: #ff3366;
@@ -708,7 +736,9 @@ template {
     text-align: center; }
   .gallery__photo {
     width: 100%;
-    display: block; }
+    display: block;
+    -webkit-animation: changingImages 4s linear infinite;
+            animation: changingImages 4s linear infinite; }
   .gallery__text {
     display: block;
     position: absolute;

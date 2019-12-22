@@ -12,6 +12,7 @@
 * adding svg icons and using sprite.svg
 * animated buttons
 * currentColors, mask-image
+* images changing in gallery section with js
 
 ![mobile view in portrait mode](github/trillo-mobile.jpg)
 

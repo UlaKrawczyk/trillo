@@ -10,6 +10,7 @@
   &__photo {
     width: 100%;
     display: block;
+    animation: changingImages 4s linear infinite;
   }
 
   &__text {

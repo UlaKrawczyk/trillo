@@ -151,8 +151,8 @@
   margin-bottom: 2rem;
 }
 .details-list {
-  margin: 3rem 0;
-  padding: 3rem 0;
+  margin: 2rem 0;
+  padding: 2rem 0;
   list-style: none;
   border-top: var(--line);
   border-bottom: var(--line);
@@ -175,7 +175,7 @@
     background-image: url(../../assets/img/chevron-thin-right.svg);
     background-size: cover;
 
-    //*newer rowsers - masks:
+    //*newer browsers - masks:
     @supports (mask-image: url()) or (-webkit-mask-image: url()) {
       background-color: var(--color-primary-dark);
       mask-image: url(../../assets/img/chevron-thin-right.svg);
@@ -189,6 +189,8 @@
   align-items: center;
   font-size: 1.25rem;
   color: var(--color-grey-dark-3);
+  padding-bottom: 2rem;
+  border-bottom: var(--line);
 
   &__count {
     margin-right: auto;
@@ -213,6 +215,88 @@
     &:hover {
       transform: scale(1.4);
     }
+  }
+}
+
+.rooms-gallery {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 3rem;
+
+  &__heading {
+    font-size: 2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    padding: 1rem 0;
+
+    @media only screen and (max-width: $bp-smallest) {
+      font-size: 1.7rem;
+    }
+  }
+
+  &__slider {
+    width: 100%;
+  }
+
+  &__slide {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 25rem;
+    height: 30vh;
+
+    &--1 {
+      background-image: url(../assets/img/image-appartment.jpg);
+    }
+    &--2 {
+      background-image: url(../assets/img/image-studio.jpg);
+    }
+    &--3 {
+      background-image: url(../assets/img/image-welcome.jpg);
+    }
+  }
+
+  &__slide-content {
+    width: 100%;
+    min-height: 25rem;
+    height: 30vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: center;
+    span {
+      font-size: 2rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: white;
+      background-color: rgba(white, 0.3);
+      padding: 1rem 2rem;
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    cursor: pointer;
+  }
+  #arrow-left {
+    left: 0;
+    border-width: 1.5rem 2rem 1.5rem 0;
+    border-color: transparent #fff transparent transparent;
+    margin-left: 2rem;
+    box-shadow: var(--shadow-dark);
+  }
+  #arrow-right {
+    right: 0;
+    border-width: 1.5rem 0 1.5rem 2rem;
+    border-color: transparent transparent transparent #fff;
+    margin-right: 2rem;
+    box-shadow: var(--shadow-dark);
   }
 }
 

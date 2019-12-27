@@ -1,4 +1,6 @@
 "use strict";
+
+//GALLERY ANIMATION
 let currentImage = 0;
 let timeChange = 4000;
 const image1 = document.querySelector('.gallery__photo1--js');
@@ -35,4 +37,46 @@ function changeImages() {
   text2.innerHTML = texts2[currentImage];
   text3.innerHTML = texts3[currentImage];
 }
-setInterval(changeImages, timeChange)
+setInterval(changeImages, timeChange);
+
+//ROOMS GALLERY SLIDER
+let sliderImages = document.querySelectorAll('.rooms-gallery__slide');
+let arrowRight = document.querySelector('#arrow-right');
+let arrowLeft = document.querySelector('#arrow-left');
+let current = 0;
+
+function reset() {
+  for (let i = 0; i < sliderImages.length; i++) {
+    sliderImages[i].style.display = 'none';
+  }
+}
+
+function startSlide() {
+  reset();
+  sliderImages[0].style.display = "block";
+}
+
+function slideLeft() {
+  reset();
+  sliderImages[current - 1].style.display = "block";
+  current--;
+}
+
+function slideRight() {
+  reset();
+  sliderImages[current + 1].style.display = "block";
+  current++;
+}
+arrowLeft.addEventListener('click', function () {
+  if (current === 0) {
+    current = sliderImages.length;
+  }
+  slideLeft();
+});
+arrowRight.addEventListener('click', function () {
+  if (current === sliderImages.length - 1) {
+    current = -1;
+  }
+  slideRight();
+});
+startSlide();

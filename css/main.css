@@ -874,8 +874,8 @@ template {
   margin-bottom: 2rem; }
 
 .details-list {
-  margin: 3rem 0;
-  padding: 3rem 0;
+  margin: 2rem 0;
+  padding: 2rem 0;
   list-style: none;
   border-top: var(--line);
   border-bottom: var(--line);
@@ -914,7 +914,9 @@ template {
       -ms-flex-align: center;
           align-items: center;
   font-size: 1.25rem;
-  color: var(--color-grey-dark-3); }
+  color: var(--color-grey-dark-3);
+  padding-bottom: 2rem;
+  border-bottom: var(--line); }
   .recommend__count {
     margin-right: auto; }
   .recommend__friends {
@@ -937,6 +939,77 @@ template {
       -webkit-transform: scale(1.4);
           -ms-transform: scale(1.4);
               transform: scale(1.4); }
+
+.rooms-gallery {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 3rem; }
+  .rooms-gallery__heading {
+    font-size: 2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    padding: 1rem 0; }
+    @media only screen and (max-width: 30.94em) {
+      .rooms-gallery__heading {
+        font-size: 1.7rem; } }
+  .rooms-gallery__slider {
+    width: 100%; }
+  .rooms-gallery__slide {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 25rem;
+    height: 30vh; }
+    .rooms-gallery__slide--1 {
+      background-image: url(../assets/img/image-appartment.jpg); }
+    .rooms-gallery__slide--2 {
+      background-image: url(../assets/img/image-studio.jpg); }
+    .rooms-gallery__slide--3 {
+      background-image: url(../assets/img/image-welcome.jpg); }
+  .rooms-gallery__slide-content {
+    width: 100%;
+    min-height: 25rem;
+    height: 30vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    text-align: center; }
+    .rooms-gallery__slide-content span {
+      font-size: 2rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: white;
+      background-color: rgba(255, 255, 255, 0.3);
+      padding: 1rem 2rem; }
+  .rooms-gallery__arrow {
+    position: absolute;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    cursor: pointer; }
+  .rooms-gallery #arrow-left {
+    left: 0;
+    border-width: 1.5rem 2rem 1.5rem 0;
+    border-color: transparent #fff transparent transparent;
+    margin-left: 2rem;
+    -webkit-box-shadow: var(--shadow-dark);
+            box-shadow: var(--shadow-dark); }
+  .rooms-gallery #arrow-right {
+    right: 0;
+    border-width: 1.5rem 0 1.5rem 2rem;
+    border-color: transparent transparent transparent #fff;
+    margin-right: 2rem;
+    -webkit-box-shadow: var(--shadow-dark);
+            box-shadow: var(--shadow-dark); }
 
 .review {
   background-color: #fff;

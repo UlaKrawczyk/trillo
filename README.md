@@ -13,6 +13,7 @@
 * animated buttons
 * currentColors, mask-image
 * images changing in gallery section with js
+* slider images showing different rooms (pure js)
 
 ![mobile view in portrait mode](github/trillo-mobile.jpg)
 

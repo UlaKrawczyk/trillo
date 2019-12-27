@@ -963,11 +963,11 @@ template {
     min-height: 25rem;
     height: 30vh; }
     .rooms-gallery__slide--1 {
-      background-image: url(../assets/img/image-appartment.jpg); }
+      background-image: url(assets/img/image-appartment.jpg); }
     .rooms-gallery__slide--2 {
-      background-image: url(../assets/img/image-studio.jpg); }
+      background-image: url(assets/img/image-studio.jpg); }
     .rooms-gallery__slide--3 {
-      background-image: url(../assets/img/image-welcome.jpg); }
+      background-image: url(assets/img/image-welcome.jpg); }
   .rooms-gallery__slide-content {
     width: 100%;
     min-height: 25rem;

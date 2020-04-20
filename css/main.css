@@ -1127,6 +1127,64 @@ template {
     -webkit-animation: pulsate 1s infinite;
             animation: pulsate 1s infinite; }
 
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 12;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s; }
+  @supports ((-webkit-backdrop-filter: blur(9px)) or (backdrop-filter: blur(9px))) or (-webkit-backdrop-filter: blur(9px)) {
+    .modal {
+      -webkit-backdrop-filter: blur(9px);
+              backdrop-filter: blur(9px);
+      background-color: rgba(0, 0, 0, 0.1); } }
+  .modal__inner {
+    width: 50%;
+    padding: 2.5rem;
+    background-color: white;
+    -webkit-box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.4);
+    -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+            transform: scale(0);
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: -webkit-transform 0.5s;
+    -o-transition: transform 0.5s;
+    transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s; }
+  .modal__image {
+    display: block;
+    width: 100%;
+    margin-bottom: 2rem; }
+  .modal__text {
+    font-size: 1.8rem;
+    text-align: center; }
+
+.open {
+  opacity: 1;
+  pointer-events: all; }
+
+.modal.open .modal__inner {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1); }
+
 .side-nav {
   font-size: 1.4rem;
   list-style: none;

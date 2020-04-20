@@ -80,3 +80,28 @@ arrowRight.addEventListener('click', function () {
   slideRight();
 });
 startSlide();
+
+//MODAL
+const button = document.querySelector('.btn');
+const modalOut = document.querySelector('.modal');
+const modalIn = document.querySelector('.modal__inner');
+
+function handleButtonClick() {
+  modalOut.classList.add('open');
+}
+button.addEventListener('click', handleButtonClick);
+
+function closeModal() {
+  modalOut.classList.remove('open');
+}
+modalOut.addEventListener('click', e => {
+  const isOpen = !e.target.closest('.modal__inner');
+  if(isOpen) {
+    closeModal();
+  }
+});
+window.addEventListener('keydown', e => {
+  if(e.key === 'Escape') {
+    closeModal();
+  }
+});

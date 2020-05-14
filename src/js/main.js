@@ -105,3 +105,23 @@ window.addEventListener('keydown', e => {
     closeModal();
   }
 });
+
+//tabs styling:
+const tabs = document.querySelector('.tabs');
+const tabButtons = tabs.querySelectorAll('[role="tab"]');
+const tabPanels = Array.from(tabs.querySelectorAll('[role="tabpanel"]'));
+
+function handleTabClick(event) {
+  //hide all tabPanels
+  tabPanels.forEach(panel => panel.hidden = true);
+  //mark all tabButtons as unselected
+  tabButtons.forEach(tab => tab.setAttribute('aria-selected', false));
+  //mark the clicked tabButton as selected
+  event.currentTarget.setAttribute('aria-selected', true);
+  //find the associated tabPanel and show it!
+  const id = event.currentTarget.id;
+  const tabPanel = tabPanels.find(panel => panel.getAttribute('aria-labelledby') === id);
+  tabPanel.hidden = false;
+}
+
+tabButtons.forEach(button => button.addEventListener('click', handleTabClick));

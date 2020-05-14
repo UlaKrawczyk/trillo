@@ -145,7 +145,7 @@
     animation: pulsate 1s infinite;
   }
 }
-//*hotel-view --> detail
+//*hotel-view --> details
 //*           --> description
 .paragraph:not(:last-of-type) {
   margin-bottom: 2rem;
@@ -300,7 +300,7 @@
   }
 }
 
-//*hotel-view --> detail
+//*hotel-view --> details
 //*           --> user-reviews
 .review {
   background-color: #fff;
@@ -358,9 +358,60 @@
   }
 }
 
-//*hotel-view --> detail
-//*           --> cta
+//*hotel-view --> tabs
+.tabs {
+  padding: 7rem 10rem;
+  border-bottom: var(--line);
+  font-size: 1.4rem;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    grid-gap: 3rem;
+    border-bottom: 3px solid var(--color-primary-dark);
+
+    @media only screen and (max-width: $bp-smallest) {
+      grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
+      grid-gap: 1rem;
+    }
+  }
+
+  &__button {
+    padding: 1.5rem 2rem;
+    background-color: var(--color-grey-light-1);
+    border: 0;
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: var(--color-grey-dark-2);
+    box-shadow: 0 1px 2rem rgba(0, 0, 0, 0.1);
+    border-radius: 3px 3px 0 0;
+    cursor: pointer;
+
+    @media only screen and (max-width: $bp-smallest) {
+      padding: 0.8rem 1rem;
+    }
+  }
+  &__button:focus {
+    outline: none;
+    box-shadow: 0 1px 2rem rgba(0, 0, 0, 0.1);
+  }
+
+  &__button[aria-selected="true"] {
+    background-image: linear-gradient(to right, var(--color-primary), var(--color-primary-dark));
+    color: var(--color-grey-light-1);
+  }
+
+  &__panel {
+    background-color: var(--color-grey-light-1);
+    padding: 5rem 3rem;
+    box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.07);
+    border-radius: 0 0 3px 3px;
+  }
+}
+
+//*hotel-view --> cta
 .cta {
+  background-color: var(--color-grey-light-1);
   padding: 3.5rem 3rem;
   text-align: center;
 

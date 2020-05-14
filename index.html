@@ -260,7 +260,37 @@
 
             <button class="btn-inline">show all <span>&rarr;</span></button>
           </div>
+        </div>
 
+        <div class="tabs">
+          <div class='tabs__list' role="tablist" aria-label="detail information about selected hotel">
+            <button class='tabs__button' role="tab" aria-selected="true" id='about'>About</button>
+            <button class='tabs__button' role="tab" aria-selected="false" id='location'>Location</button>
+            <button class='tabs__button' role="tab" aria-selected="false" id='prices'>Prices</button>
+          </div>
+          <div class='tabs__panel' role="tabpanel" aria-labelledby="about">
+            <p>The hotel offers 61 modern Classic rooms (single or double) and 5 suites, including luxurious
+              Presidential Suite. Rooms in Grand Royal Hotel are spacious and air-conditioned. Each of them provides
+              wireless Internet access, mini bar, coffee making facility, satellite LCD television, bathrobes and a
+              hairdryer.</p>
+          </div>
+          <div class='tabs__panel' role="tabpanel" aria-labelledby="location" hidden>
+            <p>
+              Hotel Las Palmas is located in a big city of Cracow within the city center, in a 10-minute drive from the
+              A4 highway,
+              5.5 kilometers from the Cracow International Fair and the Cracow main railway station. It's a great place
+              to stay overnight for sightseeing. You are very welcome in Cracow, the city of kings!
+            </p>
+          </div>
+          <div class='tabs__panel' role="tabpanel" aria-labelledby="prices" hidden>
+            <p>
+              Example: 5-day stay with breakfast In this example prices are quoted per room per night:
+              According to the standard price list below At a discount of 10% (per stay for 5 nights) with breakfast
+              buffet.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, sapiente reiciendis
+              itaque sed autem magni!
+            </p>
+          </div>
         </div>
 
         <div class="cta">
